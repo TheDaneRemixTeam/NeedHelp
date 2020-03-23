@@ -85,3 +85,13 @@ footer {
 .footer-copyright {
     background-color: rgba(58, 55, 55, 0.411) !important;
 }
+
+#sort {
+    margin: 10px 0px 10px 30px;
+    background-color: rgb(165, 164, 164);
+}
+
+#sort-row {
+    background-color: rgb(175, 178, 180);
+    box-shadow: 2px 2px 2px gray;
+}
