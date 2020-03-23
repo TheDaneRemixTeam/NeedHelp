@@ -35,8 +35,53 @@
 
 section {
     background-color: lightsteelblue;
+    box-shadow: 2px 2px 2px gray;
 }
 
 .card-deck {
     padding: 40px 30px 0px 30px;
+}
+
+.display-4 {
+    font-weight: bolder;
+}
+
+#help {
+    margin-left: 50%;
+    background-color: rgb(235, 11, 78);
+    border-color: rgb(235, 11, 78);
+}
+
+#help:hover {
+    background-color: lightskyblue;
+    border-color: lightskyblue;
+}
+
+.btn {
+    box-shadow: 2px 2px 2px gray;
+}
+
+#help-input {
+    box-shadow: 2px 2px 2px gray;
+}
+
+.card {
+    box-shadow: 2px 2px 2px gray;
+}
+
+.card-title {
+    color: cornflowerblue;
+    font-weight: bolder;
+}
+
+.nav-link:hover {
+    color: cornflowerblue !important;
+}
+
+footer {
+    background-color: gray;
+}
+
+.footer-copyright {
+    background-color: rgba(58, 55, 55, 0.411) !important;
 }
