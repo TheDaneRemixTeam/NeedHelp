@@ -22,19 +22,4 @@ module.exports = function(app) {
       res.json(dbExample);
     });
   });
-
-  // User routes added
-  // get all user information from the database
-  app.get("/api/users", function(req, res) {
-    db.User.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
-    });
-  });
-
-  // save a new username
-  app.post("/api/users", function(request, response) {
-    db.User.create(request.body).then(function(results) {
-      response.json(results);
-    });
-  });
 };
