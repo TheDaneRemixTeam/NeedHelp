@@ -125,6 +125,12 @@
         background-size: cover;
     }
     
+    #gig-create-body {
+        background-image: url(/public/images/priscilla-du-preez-xLKg2s4rXWE-unsplash.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    
     #form-bc {
         background-color: white !important;
         margin-top: 200px;
