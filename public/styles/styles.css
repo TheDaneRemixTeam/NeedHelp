@@ -104,3 +104,32 @@ footer {
 .text-muted {
     margin-left: 10px;
 }
+
+#open-card-title {
+    margin: 30px 0px 0px 30px;
+}
+
+#help-btn {
+    font-size: 30px;
+}
+
+#signup-body {
+    background-image: url(../images/jose-aljovin-tdz9pb_ScG8-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#signup-messege {
+    color: white !important;
+    margin-top: 200px
+}
+
+#form {
+    margin-top: 200px;
+    background-color: white !important;
+    padding: 10px 10px 10px 10px;
+}
+
+.form-group {
+    padding: 0px 0px 0px 0px !important;
+}
