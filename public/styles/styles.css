@@ -47,7 +47,7 @@ section {
 }
 
 #help {
-    margin-left: 50%;
+    /* margin-left: 50%; */
     background-color: rgb(235, 11, 78);
     border-color: rgb(235, 11, 78);
 }
@@ -72,6 +72,7 @@ section {
 .card-title {
     color: cornflowerblue;
     font-weight: bolder;
+    margin-bottom: 2px !important;
 }
 
 .nav-link:hover {
@@ -92,6 +93,14 @@ footer {
 }
 
 #sort-row {
-    background-color: rgb(175, 178, 180);
+    background-color: rgb(215, 220, 223);
     box-shadow: 2px 2px 2px gray;
+}
+
+.navbar-toggler-icon {
+    background-color: gray !important;
+}
+
+.text-muted {
+    margin-left: 10px;
 }
