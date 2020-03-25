@@ -1,6 +1,7 @@
 require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
+var session = require("express-session");
 
 // Require the configured passport
 var passport = require("./config/passport.js");
