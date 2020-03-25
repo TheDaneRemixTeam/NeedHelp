@@ -4,7 +4,7 @@ var exphbs = require("express-handlebars");
 var session = require("express-session");
 
 // Require the configured passport
-var passport = require("./config/passport.js");
+var passport = require("./config/passport");
 
 var db = require("./models");
 

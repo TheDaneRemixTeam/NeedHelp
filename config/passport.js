@@ -36,3 +36,15 @@ passport.use(new LocalStrategy(
     });
    } 
 ));
+// Sequelize needs to serialize and deserialize the user
+// Just consider this part boilerplate needed to make it all work
+passport.serializeUser(function(user, cb) {
+    cb(null, user);
+  });
+  //
+  passport.deserializeUser(function(obj, cb) {
+    cb(null, obj);
+  });
+  //
+  // Exporting our configured passport
+  module.exports = passport;
