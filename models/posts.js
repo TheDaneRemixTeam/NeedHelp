@@ -3,6 +3,10 @@
 module.exports = function(sequelize, DataTypes) {
   var Post = sequelize.define("Post", {
     // post title
+    category: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     title: {
       type: DataTypes.STRING,
       allowNull: false
@@ -13,6 +17,10 @@ module.exports = function(sequelize, DataTypes) {
     },
     description: {
       type: DataTypes.TEXT,
+      allowNull: false
+    },
+    time: {
+      type: DataTypes.STRING,
       allowNull: false
     },
     budget: {
