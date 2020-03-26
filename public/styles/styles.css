@@ -1,154 +1,161 @@
-    .list-group-item {
-        line-height: 2.5;
-    }
-    
-    .nav-link {
-        color: black !important;
-        font-size: 20px;
-    }
-    
-    .navbar {
-        box-shadow: 2px 2px lightgray;
-    }
-    
-    .btn-success {
-        background-color: cornflowerblue;
-        border-color: cornflowerblue;
-    }
-    
-    .center-block {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .jumbotron {
-        background-image: url(../images/perry-grone-lbLgFFlADrY-unsplash.jpg);
-        background-size: cover;
-        color: cornsilk;
-        height: 300px;
-    }
-    
-    .btn:hover {
-        background-color: lightskyblue;
-    }
-    
-    section {
-        background-color: lightsteelblue;
-        box-shadow: 2px 2px 2px gray;
-    }
-    
-    .card-deck {
-        padding: 40px 30px 0px 30px;
-    }
-    
-    .display-4 {
-        font-weight: bolder;
-    }
-    
-    #help {
-        /* margin-left: 50%; */
-        background-color: rgb(235, 11, 78);
-        border-color: rgb(235, 11, 78);
-    }
-    
-    #help:hover {
-        background-color: lightskyblue;
-        border-color: lightskyblue;
-    }
-    
-    .btn {
-        box-shadow: 2px 2px 2px gray;
-    }
-    
-    #help-input {
-        box-shadow: 2px 2px 2px gray;
-    }
-    
-    .card {
-        box-shadow: 2px 2px 2px gray;
-    }
-    
-    .card-title {
-        color: cornflowerblue;
-        font-weight: bolder;
-        margin-bottom: 2px !important;
-    }
-    
-    .nav-link:hover {
-        color: cornflowerblue !important;
-    }
-    
-    footer {
-        background-color: gray;
-    }
-    
-    .footer-copyright {
-        background-color: rgba(58, 55, 55, 0.411) !important;
-    }
-    
-    #sort {
-        margin: 10px 0px 10px 30px;
-        background-color: rgb(165, 164, 164);
-    }
-    
-    #sort-row {
-        background-color: rgb(215, 220, 223);
-        box-shadow: 2px 2px 2px gray;
-    }
-    
-    .navbar-toggler-icon {
-        background-color: gray !important;
-    }
-    
-    .text-muted {
-        margin-left: 10px;
-    }
-    
-    #open-card-title {
-        margin: 30px 0px 0px 30px;
-    }
-    
-    #help-btn {
-        font-size: 30px;
-    }
-    
-    #signup-body {
-        background-image: url(../images/jose-aljovin-tdz9pb_ScG8-unsplash.jpg);
-        background-position: center;
-        background-size: cover;
-    }
-    
-    #req-signup-body {
-        background-image: url(../images/anna-earl-cTtE2FlIRoU-unsplash.jpg);
-        background-position: center;
-        background-size: cover;
-    }
-    
-    #gig-create-body {
-        background-image: url(../images/priscilla-du-preez-xLKg2s4rXWE-unsplash.jpg);
-        background-position: center;
-        background-size: cover;
-    }
-    
-    #form-bc {
-        background-color: white !important;
-        margin-top: 200px;
-        margin-bottom: 200px;
-        padding: 20px 20px 20px 20px;
-        border-radius: 25px;
-        box-shadow: 2px 2px 2px gray;
-    }
-    
-    #mac-section {
-        padding-top: 40px;
-        background-color: white !important;
-    }
-    
-    #how-it-works-list {
-        font-size: 30px;
-    }
-    
-    #how-it-works-col {
-        padding: 20px 0px 0px 50px;
-    }
+            .list-group-item {
+            line-height: 2.5;
+        }
+        
+        .nav-link {
+            color: black !important;
+            font-size: 20px;
+        }
+        
+        .navbar {
+            box-shadow: 2px 2px lightgray;
+        }
+        
+        .btn-success {
+            background-color: cornflowerblue;
+            border-color: cornflowerblue;
+        }
+        
+        .center-block {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .jumbotron {
+            background-image: url(../images/perry-grone-lbLgFFlADrY-unsplash.jpg);
+            background-size: cover;
+            color: cornsilk;
+            height: 300px;
+        }
+        
+        .btn:hover {
+            background-color: lightskyblue;
+        }
+        
+        section {
+            background-color: lightsteelblue;
+            box-shadow: 2px 2px 2px gray;
+        }
+        
+        .card-deck {
+            padding: 40px 30px 0px 30px;
+        }
+        
+        .display-4 {
+            font-weight: bolder;
+        }
+        
+        #help {
+            /* margin-left: 50%; */
+            background-color: rgb(235, 11, 78);
+            border-color: rgb(235, 11, 78);
+        }
+        
+        #help:hover {
+            background-color: lightskyblue;
+            border-color: lightskyblue;
+        }
+        
+        .btn {
+            box-shadow: 2px 2px 2px gray;
+        }
+        
+        #help-input {
+            box-shadow: 2px 2px 2px gray;
+        }
+        
+        .card {
+            box-shadow: 2px 2px 2px gray;
+        }
+        
+        .card-title {
+            color: cornflowerblue;
+            font-weight: bolder;
+            margin-bottom: 2px !important;
+        }
+        
+        .nav-link:hover {
+            color: cornflowerblue !important;
+        }
+        
+        footer {
+            background-color: gray;
+        }
+        
+        .footer-copyright {
+            background-color: rgba(58, 55, 55, 0.411) !important;
+        }
+        
+        #sort {
+            margin: 10px 0px 10px 30px;
+            background-color: rgb(165, 164, 164);
+        }
+        
+        #sort-row {
+            background-color: rgb(215, 220, 223);
+            box-shadow: 2px 2px 2px gray;
+        }
+        
+        .navbar-toggler-icon {
+            background-color: gray !important;
+        }
+        
+        .text-muted {
+            margin-left: 10px;
+        }
+        
+        #open-card-title {
+            margin: 30px 0px 0px 30px;
+        }
+        
+        #help-btn {
+            font-size: 30px;
+        }
+        
+        #signup-body {
+            background-image: url(../images/jose-aljovin-tdz9pb_ScG8-unsplash.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        
+        #req-signup-body {
+            background-image: url(../images/anna-earl-cTtE2FlIRoU-unsplash.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        
+        #gig-create-body {
+            background-image: url(../images/priscilla-du-preez-xLKg2s4rXWE-unsplash.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        
+        #form-bc {
+            background-color: white !important;
+            margin-top: 200px;
+            margin-bottom: 200px;
+            padding: 20px 20px 20px 20px;
+            border-radius: 25px;
+            box-shadow: 2px 2px 2px gray;
+        }
+        
+        #mac-section {
+            padding-top: 40px;
+            background-color: white !important;
+        }
+        
+        #how-it-works-list {
+            font-size: 30px;
+        }
+        
+        #how-it-works-col {
+            padding: 20px 0px 0px 50px;
+        }
+        
+        #log-in {
+            font-size: 30px;
+        }
+        
+        #create-account {
+            background-color: tomato;
