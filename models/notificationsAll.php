@@ -22,7 +22,7 @@ if (isset($_POST["send_all"])){
 
 function sendMessage() {
     $headings = array (
-        "en" => "My header if I had something to say to all" <--eventually a header
+        "en" => "why would we want all?." <--eventually a header
     );
 
     $content      = array(
