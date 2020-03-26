@@ -14,24 +14,23 @@ module.exports = function(app) {
     app.get("/create", function(req, res) {
         db.Example.findAll({}).then(function(dbExamples) {
             res.render("gigcreate", {
+                title: "Create Help Request"
+            });
+        });
+    });
+
+    app.get("/login", function(req, res) {
+        db.Example.findAll({}).then(function(dbExamples) {
+            res.render("login", {
                 // msg: "Welcome!",
                 // examples: dbExamples
             });
         });
     });
 
-    app.get("/helpersignup", function(req, res) {
+    app.get("/signup", function(req, res) {
         db.Example.findAll({}).then(function(dbExamples) {
-            res.render("helpersignup", {
-                // msg: "Welcome!",
-                // examples: dbExamples
-            });
-        });
-    });
-
-    app.get("/reqsignup", function(req, res) {
-        db.Example.findAll({}).then(function(dbExamples) {
-            res.render("requestersignup", {
+            res.render("signup", {
                 // msg: "Welcome!",
                 // examples: dbExamples
             });
