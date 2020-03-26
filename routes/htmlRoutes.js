@@ -19,6 +19,15 @@ module.exports = function(app) {
         });
     });
 
+    app.get("/gigview", function(req, res) {
+        db.Example.findAll({}).then(function(dbExamples) {
+            res.render("gigview", {
+                // msg: "Welcome!",
+                // examples: dbExamples
+            });
+        });
+    });
+
     app.get("/login", function(req, res) {
         db.Example.findAll({}).then(function(dbExamples) {
             res.render("login", {
