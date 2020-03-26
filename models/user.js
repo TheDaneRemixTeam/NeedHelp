@@ -36,6 +36,12 @@ module.exports = function(sequelize, DataTypes) {
         timestamps: false
     });
 
+    User.associate = function(models) {
+        User.hasMany(models.Post, {
+            onDelete: "CASCADE"
+        });
+    };
+
     // method that will compare the unhased password entered by the user matches the one in the database
     User.prototype.validPassword = function(password) {
         return bcrypt.compareSync(password, this.password);
