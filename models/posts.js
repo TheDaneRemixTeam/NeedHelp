@@ -21,5 +21,14 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
+  Post.associate = function(models) {
+    Post.belongsTo(models.User, {
+      onDelete: "CASCADE",
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
+
   return Post;
 };
