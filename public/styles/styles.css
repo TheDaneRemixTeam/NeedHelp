@@ -2,7 +2,8 @@
         line-height: 2.5;
     }
     
-    .nav-link {
+    .nav-link,
+    .tab {
         color: black !important;
         font-size: 20px;
     }
