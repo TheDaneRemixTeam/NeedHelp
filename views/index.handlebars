@@ -81,6 +81,14 @@
 
   </div>
 
+  <ul>
+  {{#each Posts}}
+  	<li>
+  	   <p>ID: {{./this.id}}</p>
+       <p>Category: {{./this.category}}</p>
+  	</li>
+  {{/each}}
+</ul>
 
 
   <div class="card-deck">

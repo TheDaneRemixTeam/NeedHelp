@@ -161,3 +161,21 @@
         #create-account {
             background-color: tomato;
         }
+
+        .tab {
+            height: 200% !important;
+        }
+
+        #menu1
+        {
+            color: rgb(13, 30, 118);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 10%;
+            padding: 5%;
+        }
+
+        #menu2,
+        #menu3 {
+            color: rgb(13, 30, 118);
+            margin: 6%;
+        }
