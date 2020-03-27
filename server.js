@@ -38,6 +38,15 @@ require("./routes/htmlRoutes")(app);
 
 var syncOptions = { force: false };
 
+app.get("/gigview", function(req, res) {
+  connection.query("SELECT * FROM posts;", function(err, data) {
+    // eslint-disable-next-line curly
+    if (err) throw err;
+
+    res.render("gigview", { posts: data });
+  });
+});
+
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`
 if (process.env.NODE_ENV === "test") {
