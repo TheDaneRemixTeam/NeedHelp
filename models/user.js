@@ -26,6 +26,18 @@ module.exports = function(sequelize, DataTypes) {
         },
         address: {
             type: DataTypes.STRING,
+            allowNull: true
+        },
+        city: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        state: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        zip: {
+            type: DataTypes.STRING,
             allowNull: false
         },
         password: {
@@ -36,8 +48,6 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: true
         }
-    }, {
-        timestamps: false
     });
 
     User.associate = function(models) {
