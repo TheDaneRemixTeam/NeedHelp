@@ -22,4 +22,15 @@ module.exports = function(app) {
       res.json(dbExample);
     });
   });
+
+app.get("/api/gigview/:id", function(req, res) {
+  db.Post.findOne({
+    where: {
+      id: req.params.id
+    }
+  }).then(function(dbPost) {
+    console.log(dbPost);
+    res.json(dbPost);
+  });
+});
 };
