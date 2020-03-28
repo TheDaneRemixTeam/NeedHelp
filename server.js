@@ -36,7 +36,7 @@ require("./routes/apiRoutes")(app);
 require("./routes/login-api-routes")(app);
 require("./routes/htmlRoutes")(app);
 
-var syncOptions = { force: false };
+var syncOptions = { force: true };
 
 app.get("/gigview", function(req, res) {
     connection.query("SELECT * FROM Posts;", function(err, data) {

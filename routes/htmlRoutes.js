@@ -6,18 +6,13 @@ module.exports = function(app) {
         db.Post.findAll({}).then(function(dbPost) {
             res.render("index", {
                 gigs: dbPost
-
-
             });
         });
     });
 
     app.get("/create", function(req, res) {
         db.Post.findAll({}).then(function(dbPost) {
-            res.render("gigcreate", {
-
-
-            });
+            res.render("gigcreate", {});
         });
     });
 
@@ -25,7 +20,6 @@ module.exports = function(app) {
         db.Post.findAll({}).then(function(dbPost) {
             res.render("gigview", {
                 gigs: dbPost
-
             });
         });
     });
@@ -60,7 +54,9 @@ module.exports = function(app) {
     // Load example page and pass in an example by id
     app.get("/example/:id", function(req, res) {
         // eslint-disable-next-line prettier/prettier
-        db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
+        db.Example.findOne({ where: { id: req.params.id } }).then(function(
+            dbExample
+        ) {
             res.render("example", {
                 example: dbExample
             });
