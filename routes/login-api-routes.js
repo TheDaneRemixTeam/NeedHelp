@@ -22,6 +22,12 @@ module.exports = function(app) {
         }); 
     });
 
+    // logging out
+    app.get("/logout", function(req, res) {
+        req.logout();
+        res.redirect("/");
+    });
+
     // route for getting user data
     app.get("/api/user_data", function(req, res) {
         if (!req.user) {
