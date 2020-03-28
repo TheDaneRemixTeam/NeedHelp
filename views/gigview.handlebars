@@ -23,13 +23,13 @@
     <div class="card">
       {{!-- <img src="..." class="card-img-top" alt="..."> --}}
       <div class="card-body">
-        <h5 class="card-this."><span>Title:</span> {{this.title}}</h5>
-        <small><span>Requester:</span>{{this.poster}}</small>
+        <h5 class="card-this."><span>Title:</span> {{gigs.title}}</h5>
+        <small><span>Requester:</span>{{gigs.poster}}</small>
         <hr>
 
-        <p><span class="label">Description:</span> {{this.description}}</p>
-         <p><span class="label">Time:</span> {{this.time}}</p>
-     <p><span class="label">Budget:</span> {{this.budget}}</p>
+        <p><span class="label">Description:</span> {{gigs.description}}</p>
+         <p><span class="label">Time:</span> {{gigs.gigtime}}</p>
+     <p><span class="label">Budget:</span> {{gigs.budget}}</p>
       </div>
       <div class="card-footer">
         <button class="btn btn-success" type="submit" id="approve" onclick="window.location.href='/account'">Accept!</button>

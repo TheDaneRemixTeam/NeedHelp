@@ -81,128 +81,35 @@
 
   </div>
 
-  
+  <div class="card-deck">
   {{#each gigs}}
-<div class="card-deck">
+
     <div class="card">
       {{!-- <img src="..." class="card-img-top" alt="..."> --}}
       <div class="card-body">
-        <h5 class="card-title">{{this.title}}</h5>
-        <small>Requestor: {{this.poster}}</small>
+        <h5 class="card-title">{{title}}</h5>
+        <small>Requestor: {{poster}}</small>
         <hr>
 
-        <p class="card-text">{{this.description}}</p>
+        <p class="card-text">{{description}}</p>
       </div>
       <div class="card-footer">
-        <button class="btn btn-success" type="submit" id="help" onclick="window.location.href='/login'">I Can Help!</button>
+        <button class="btn btn-success" type="submit" id="help" onclick="window.location.href='/gigview/{{id}}'">I Can Help!</button>
         <small class="text-muted">Budget: {{budget}}</small>
 
       </div>
     </div>
+
   {{/each}}
-
-
-
-  <div class="card-deck">
-    <div class="card">
-      {{!-- <img src="..." class="card-img-top" alt="..."> --}}
-      <div class="card-body">
-        <h5 class="card-title">Install Ring video doorbell</h5>
-        <small>Requestor: Joe Smith</small>
-        <hr>
-
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
-          This content is a little bit longer.</p>
-      </div>
-      <div class="card-footer">
-        <button class="btn btn-success" type="submit" id="help" onclick="window.location.href='/login'">I Can Help!</button>
-        <small class="text-muted">Budget: $50</small>
-
-      </div>
-    </div>
-    <div class="card">
-      {{!-- <img src="..." class="card-img-top" alt="..."> --}}
-      <div class="card-body">
-        <h5 class="card-title">Pick up a couch</h5>
-        <small>Requestor: Joe Smith</small>
-        <hr>
-        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      </div>
-      <div class="card-footer">
-        <button class="btn btn-success" type="submit" id="help" onclick="window.location.href='/login'">I Can Help!</button>
-        <small class="text-muted">Budget: $50</small>
-
-      </div>
-    </div>
-    <div class="card">
-      {{!-- <img src="..." class="card-img-top" alt="..."> --}}
-      <div class="card-body">
-        <h5 class="card-title">Build a website</h5>
-        <small>Requestor: Joe Smith</small>
-        <hr>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
-          This card has even longer content than the first to show that equal height action.</p>
-      </div>
-      <div class="card-footer">
-        <button class="btn btn-success" type="submit" id="help" onclick="window.location.href='/login'">I Can Help!</button>
-        <small class="text-muted">Budget: $200 </small>
-
-      </div>
-    </div>
   </div>
-  <br>
-
-  <div class="card-deck">
-    <div class="card">
-      {{!-- <img src="..." class="card-img-top" alt="..."> --}}
-      <div class="card-body">
-        <h5 class="card-title">Build my resume</h5>
-        <small>Requestor: Joe Smith</small>
-        <hr>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
-          This content is a little bit longer.</p>
-      </div>
-      <div class="card-footer">
-        <button class="btn btn-success" type="submit" id="help" onclick="window.location.href='/login'">I Can Help!</button>
-        <small class="text-muted">Budget: $25</small>
-
-      </div>
-    </div>
-    <div class="card">
-      {{!-- <img src="..." class="card-img-top" alt="..."> --}}
-      <div class="card-body">
-        <h5 class="card-title">Fix my flat tire!</h5>
-        <small>Requestor: Joe Smith</small>
-        <hr>
-        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      </div>
-      <div class="card-footer">
-        <button class="btn btn-success" type="submit" id="help" onclick="window.location.href='/login'">I Can Help!</button>
-        <small class="text-muted">Budget: $100</small>
-
-      </div>
-    </div>
-    <div class="card">
-      {{!-- <img src="..." class="card-img-top" alt="..."> --}}
-      <div class="card-body">
-        <h5 class="card-title">Help me grocery shop</h5>
-        <small>Requestor: Joe Smith</small>
-        <hr>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
-          This card has even longer content than the first to show that equal height action.</p>
-      </div>
-      <div class="card-footer">
-        <button class="btn btn-success" type="submit" id="help" onclick="window.location.href='/login'">I Can Help!</button>
-        <small class="text-muted">Budget: $25 </small>
 
 
-      </div>
-    </div>
-  </div>
-  <br>
-  <br>
+
+ <br>
 
 </section>
+
+
 
 <!-- Footer -->
 <footer class="page-footer font-small blue pt-4">

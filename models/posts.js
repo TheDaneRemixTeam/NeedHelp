@@ -26,7 +26,15 @@ module.exports = function(sequelize, DataTypes) {
         budget: {
             type: DataTypes.STRING,
             allowNull: false
+        },
+
+        claimed: {
+            type: DataTypes.BOOLEAN,
+            defaultValue: false,
+            allowNull: false
         }
+
+
     });
 
     Post.associate = function(models) {
