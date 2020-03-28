@@ -5,7 +5,7 @@ var db = require("../models");
 module.exports = function(app) {
     // Load index page
     app.get("/", function(req, res) {
-        db.Post.findAll({raw: true}).then(function(dbPost) {
+        db.Post.findAll({ raw: true, where: { claimed: false } }).then(function(dbPost) {
             //console.log(dbPost);
             res.render("index", {
                 gigs: dbPost
@@ -20,14 +20,14 @@ module.exports = function(app) {
     });
 
     app.get("/gigview/:id", function(req, res) {
-        db.Post.findOne({raw: true, where: {id: req.params.id}}).then(function(dbPost) {
+        db.Post.findOne({ raw: true, where: { id: req.params.id } }).then(function(dbPost) {
             console.log(dbPost);
             res.render("gigview", {
                 gigs: dbPost
             });
         });
     });
-    
+
 
     app.get("/login", function(req, res) {
         db.Example.findAll({}).then(function(dbExamples) {
