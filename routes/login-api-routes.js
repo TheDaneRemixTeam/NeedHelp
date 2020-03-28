@@ -34,7 +34,11 @@ module.exports = function(app) {
             res.json({});
         }
         else {
-            res.json(req.user);
+            res.json({
+                firstname: req.user.firstname,
+                email: req.user.email,
+                id: req.user.id
+            });
         }
     });
 };

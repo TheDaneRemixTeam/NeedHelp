@@ -32,6 +32,12 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.BOOLEAN,
             defaultValue: false,
             allowNull: false
+        },
+
+
+        helperID: {
+            type: DataTypes.INTEGER,
+            allowNull: true
         }
 
 
@@ -41,7 +47,7 @@ module.exports = function(sequelize, DataTypes) {
         Post.belongsTo(models.User, {
             onDelete: "CASCADE",
             foreignKey: {
-                allowNull: true
+                allowNull: false
             }
         });
     };
