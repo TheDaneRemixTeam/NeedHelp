@@ -48,11 +48,17 @@ module.exports = function(app) {
     });
 
     app.get("/account", function(req, res) {
-        db.Example.findAll({}).then(function(dbExamples) {
-            res.render("account", {
-                // msg: "Welcome!",
-                // examples: dbExamples
-            });
+        let userId = 1;
+        if (req.user && req.user.id){
+         userId = req.user.id;
+        }
+        db.Post.findAll({raw: true, where: {UserId: userId}}).then(function(postedGigs) {
+            db.Post.findAll({raw: true, where: {helperID: userId}}).then(function(claimedGigs) {
+                res.render("account", {
+                    postedGigs, claimedGigs
+                });
+            })
+            
         });
     });
 
@@ -72,4 +78,13 @@ module.exports = function(app) {
     app.get("*", function(req, res) {
         res.render("404");
     });
+
+    // app.get("/account/:UserId", function(req, res) {
+        // db.Post.findAll({ raw: true, where: { UserId: UserID } }).then(function(dbPost) {
+            // console.log(dbPost);
+            // res.render("account", {
+                // gigs: dbPost
+            // });
+        // });
+    // });
 };

@@ -8,6 +8,7 @@ $("#help-btn").on("click", function(event) {
         gigtime: $("#time").val().trim(),
         budget: $("#inputBudget").val().trim(),
 
+
     }
     $.post("/api/create", newGig).then(function(data) {
 
