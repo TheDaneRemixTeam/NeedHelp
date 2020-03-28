@@ -32,7 +32,7 @@
      <p><span class="label">Budget:</span> {{gigs.budget}}</p>
       </div>
       <div class="card-footer">
-        <button class="btn btn-success" type="submit" id="approve" onclick="window.location.href='/account'">Accept!</button>
+        <button class="btn btn-success" type="submit" id="approve" data-id="{{gigs.id}}"">Accept!</button>
 
         <button class="btn btn-success" type="submit" id="nope" onclick="window.location.href='/'">No Thanks</button>
        
@@ -41,6 +41,7 @@
     </div>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
+<script src="/js/claim.js"></script>
 
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
