@@ -45,45 +45,49 @@
               </div>
               <div id="menu2" class="tab-pane fade">
                 <h3 style="text-align: center;">Gigs You Claimed</h3>
-                <div class="card-deck">
-                    <div class="card">
-                      
-                      <div class="card-body">
-                        <h5 class="card-title">Install Ring video doorbell</h5>
-                        
-                        <hr>
-                
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
-                          This content is a little bit longer.</p>
-                      </div>
-                      <div class="card-footer">
-                        <p>This Was Claimed 00/00/000</p>
-                        <small class="text-muted">Budget: $50</small>
-                
-                      </div>
-                    </div>
-                  </div>
+                  <div class="card-deck">
+  {{#each claimedGigs}}
+
+    <div class="card">
+      {{!-- <img src="..." class="card-img-top" alt="..."> --}}
+      <div class="card-body">
+        <h5 class="card-title">{{title}}</h5>
+        <small>Requestor: {{poster}}</small>
+        <hr>
+
+        <p class="card-text">{{description}}</p>
+      </div>
+      <div class="card-footer">
+        
+        <small class="text-muted">Budget: {{budget}}</small>
+
+      </div>
+    </div>
+
+  {{/each}}
+  </div>
               </div>
               <div id="menu3" class="tab-pane fade">
                 <h3 style="text-align: center;">Gigs You Posted</h3>
-                <div class="card-deck">
-                    <div class="card">
-                      
-                      <div class="card-body">
-                        <h5 class="card-title">Install Ring video doorbell</h5>
-                        
-                        <hr>
-                
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
-                          This content is a little bit longer.</p>
-                      </div>
-                      <div class="card-footer">
-                        <p>This Was Claimed 00/00/000</p>
-                        <small class="text-muted">Budget: $50</small>
-                
-                      </div>
-                    </div>
-                  </div>
+{{#each postedGigs}}
+
+    <div class="card">
+      {{!-- <img src="..." class="card-img-top" alt="..."> --}}
+      <div class="card-body">
+        <h5 class="card-title">{{title}}</h5>
+        <small>Requestor: {{poster}}</small>
+        <hr>
+
+        <p class="card-text">{{description}}</p>
+      </div>
+      <div class="card-footer">
+        
+        <small class="text-muted">Budget: {{budget}}</small>
+
+      </div>
+    </div>
+
+  {{/each}}
               </div>
             </div>
           </div>
