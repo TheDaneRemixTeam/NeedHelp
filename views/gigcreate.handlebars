@@ -19,7 +19,16 @@
             </ul>
         </div>
     </nav>
+    <div class="card">
+  		<p><span class="label">Title:</span> {{this.title}}</p>
+      <p><span class="label">Description:</span> {{this.description}}</p>
+      <p><span class="label">Time:</span> {{this.time}}</p>
+     <p><span class="label">Budget:</span> {{this.budget}}</p>
 
+      <button data-id="{{this.id}}" class="accept">Accept</button>
+
+      <button data-id="{{this.id}}" class="noThanks">No Thanks</button>
+</div>
 
 
     <section id="gig-create-body">
