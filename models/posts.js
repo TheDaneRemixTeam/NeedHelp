@@ -32,6 +32,12 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.BOOLEAN,
             defaultValue: false,
             allowNull: false
+        },
+
+
+        helperID: {
+            type: DataTypes.INTEGER,
+            allowNull: true
         }
 
 
