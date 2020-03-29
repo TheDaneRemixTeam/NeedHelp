@@ -54,12 +54,15 @@ module.exports = function(app) {
         }
         db.Post.findAll({raw: true, where: {UserId: userId}}).then(function(postedGigs) {
             db.Post.findAll({raw: true, where: {helperID: userId}}).then(function(claimedGigs) {
-                res.render("account", {
-                    postedGigs, claimedGigs
-                });
-            })
+                db.User.findOne({raw: true, where: {id: userId}}).then(function(dbUser) {
+                    res.render("account", {
+                        user: dbUser, postedGigs, claimedGigs
+                    });
+                })
+            });
             
         });
+       
     });
 
     // Load example page and pass in an example by id
