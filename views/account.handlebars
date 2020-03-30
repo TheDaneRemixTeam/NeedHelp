@@ -23,7 +23,7 @@
       
       <div style="margin: 5%">
         <div class="container">    
-          <h1 class="display-4 text-center" style="color: rgb(4, 4, 97);">Hello Name</h1>
+          <h1 class="display-4 text-center" style="color: rgb(4, 4, 97);">Hello {{user.firstname}}</h1>
         </div>
       </div> 
       <section>
@@ -40,8 +40,8 @@
             <div class="tab-content">
              
               <div id="menu1" class="tab-pane active align-center card">
-                <h2>Name: Emily Reynolds</h2>
-                <h2>Contact: thisisanemail@gmail.com</h2>
+                <h2>Name: {{user.firstname}} {{user.lastname}}</h2>
+                <h2>Contact: {{user.email}}</h2>
               </div>
               <div id="menu2" class="tab-pane fade">
                 <h3 style="text-align: center;">Gigs You Claimed</h3>
