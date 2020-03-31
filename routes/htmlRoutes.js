@@ -99,14 +99,6 @@ module.exports = function (app) {
         if (req.user && req.user.id) {
             userId = req.user.id;
         }
-        console.log(`The user id is ${userId}`);
-        // db.Post.findAll({}).then(results => {
-        //     results.forEach(element => {
-        //         db.User.findAll({ raw: true, where: { id: element.helperID } }).then(user => {
-        //             console.log(user);
-        //         })
-        //     })
-        // })
         db.Post.findAll({ raw: true, where: { UserId: userId } }).then(function (postedGigs) {
             db.Post.findAll({ raw: true, where: { helperID: userId } }).then(function (claimedGigs) {
                 db.User.findOne({ raw: true, where: { id: userId } }).then(function (dbUser) {
