@@ -36,8 +36,8 @@
             <ul class="nav nav-tabs justify-content-center nav-fill flex-column flex-lg-row" style="margin-bottom: 20px; font-size: larger;">
             
               <li id="tab" class="flex-sm-fill text-sm-center nav-link Active"><a data-toggle="tab" href="#menu1">Info </a></li><br>
-              <li id="tab" class="flex-sm-fill text-sm-center nav-link"><a data-toggle="tab" href="#menu2" style="margin: 10px;">Gigs Claimed</a></li><br>
-              <li id="tab" class="flex-sm-fill text-sm-center nav-link"><a data-toggle="tab" href="#menu3">Gigs Posted</a></li><br>
+              <li id="tab" class="flex-sm-fill text-sm-center nav-link"><a data-toggle="tab" href="#menu2" style="margin: 10px;">Gigs Claimed<span class="badge badge-light">{{claimedGigs.length}}</span></a></li><br>
+              <li id="tab" class="flex-sm-fill text-sm-center nav-link"><a data-toggle="tab" href="#menu3">Gigs Posted<span class="badge badge-light">{{postedGigs.length}}</span></a></li><br>
             </ul>
         </div>
             <div class="tab-content">
@@ -51,7 +51,7 @@
                   <div class="card-deck">
   {{#each claimedGigs}}
 
-    <div class="card">
+    <div class="card" style="margin: 3%;">
       {{!-- <img src="..." class="card-img-top" alt="..."> --}}
       <div class="card-body">
         <h5 class="card-title">{{title}}</h5>
@@ -74,7 +74,7 @@
                 <h3 style="text-align: center;">Gigs You Posted</h3>
 {{#each postedGigs}}
 
-    <div class="card">
+    <div class="card" style="margin: 3%;">
       {{!-- <img src="..." class="card-img-top" alt="..."> --}}
       <div class="card-body">
         <h5 class="card-title">{{title}}</h5>
@@ -85,11 +85,11 @@
       </div>
       <div class="card-footer">
         
-        <small class="text-muted">Budget: {{budget}}</small>
+        <small class="text-muted">Budget: {{budget}}</small><br>
+        {{#if claimed}}Claimed by: {{helper.firstname}} {{helper.email}} {{else}}No one has claimed this gig...{{/if}}
 
       </div>
     </div>
-
   {{/each}}
               </div>
             </div>
