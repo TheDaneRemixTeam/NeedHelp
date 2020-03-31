@@ -6,18 +6,39 @@ var db = require("../models");
 var passport = require("../config/passport.js");
 
 module.exports = function(app) {
-    // Route for signing up a new user
+    // route for logging in
+    app.post("/api/login", passport.authenticate("local"), function(req, res) {
+        res.json("/");
+    });
+
+    // Route for signing up a new user 
     app.post("/api/signup", function(req, res) {
         console.log(req.body);
-        var newUser = {
-            firstname: req.body.firstname,
-            lastname: req.body.lastname,
-            email: req.body.email,
-            password: req.body.password,
-            phone: req.body.phone
-        };
-        db.User.create(newUser).then(function(result) {
-            res.json(result);
+        db.User.create(req.body).then(function() {
+            res.redirect(307, "/api/login");
+        }).catch(function(err) {
+            console.log(err);
+            res.json(err);
         }); 
+    });
+
+    // logging out
+    app.get("/logout", function(req, res) {
+        req.logout();
+        res.redirect("/");
+    });
+
+    // route for getting user data
+    app.get("/api/user_data", function(req, res) {
+        if (!req.user) {
+            res.json({});
+        }
+        else {
+            res.json({
+                firstname: req.user.firstname,
+                email: req.user.email,
+                id: req.user.id
+            });
+        }
     });
 };

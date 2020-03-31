@@ -1,23 +1,33 @@
+/* eslint-disable prettier/prettier */
+/* eslint-disable indent */
 var db = require("../models");
 
 module.exports = function(app) {
     // Load index page
     app.get("/", function(req, res) {
-        db.Example.findAll({}).then(function(dbExamples) {
+        db.Post.findAll({ raw: true, where: { claimed: false } }).then(function(dbPost) {
+            //console.log(dbPost);
             res.render("index", {
-                msg: "Welcome!",
-                examples: dbExamples
+                gigs: dbPost
             });
         });
     });
 
     app.get("/create", function(req, res) {
-        db.Example.findAll({}).then(function(dbExamples) {
-            res.render("gigcreate", {
-                title: "Create Help Request"
+        db.Post.findAll({}).then(function(dbPost) {
+            res.render("gigcreate", {});
+        });
+    });
+
+    app.get("/gigview/:id", function(req, res) {
+        db.Post.findOne({ raw: true, where: { id: req.params.id } }).then(function(dbPost) {
+            console.log(dbPost);
+            res.render("gigview", {
+                gigs: dbPost
             });
         });
     });
+
 
     app.get("/login", function(req, res) {
         db.Example.findAll({}).then(function(dbExamples) {
@@ -38,18 +48,29 @@ module.exports = function(app) {
     });
 
     app.get("/account", function(req, res) {
-        db.Example.findAll({}).then(function(dbExamples) {
-            res.render("account", {
-                // msg: "Welcome!",
-                // examples: dbExamples
+        let userId = 1;
+        if (req.user && req.user.id){
+         userId = req.user.id;
+        }
+        db.Post.findAll({raw: true, where: {UserId: userId}}).then(function(postedGigs) {
+            db.Post.findAll({raw: true, where: {helperID: userId}}).then(function(claimedGigs) {
+                db.User.findOne({raw: true, where: {id: userId}}).then(function(dbUser) {
+                    res.render("account", {
+                        user: dbUser, postedGigs, claimedGigs
+                    });
+                })
             });
+            
         });
+       
     });
 
     // Load example page and pass in an example by id
     app.get("/example/:id", function(req, res) {
         // eslint-disable-next-line prettier/prettier
-        db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
+        db.Example.findOne({ where: { id: req.params.id } }).then(function(
+            dbExample
+        ) {
             res.render("example", {
                 example: dbExample
             });
@@ -60,4 +81,13 @@ module.exports = function(app) {
     app.get("*", function(req, res) {
         res.render("404");
     });
+
+    // app.get("/account/:UserId", function(req, res) {
+        // db.Post.findAll({ raw: true, where: { UserId: UserID } }).then(function(dbPost) {
+            // console.log(dbPost);
+            // res.render("account", {
+                // gigs: dbPost
+            // });
+        // });
+    // });
 };
