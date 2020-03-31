@@ -23,10 +23,11 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Handlebars
+var env = process.env.NODE_ENV || "development";
 app.engine(
     "handlebars",
     exphbs({
-        defaultLayout: "main"
+        defaultLayout: env === "development" ? "main" : "mainprod"
     })
 );
 app.set("view engine", "handlebars");
@@ -36,7 +37,7 @@ require("./routes/apiRoutes")(app);
 require("./routes/login-api-routes")(app);
 require("./routes/htmlRoutes")(app);
 
-var syncOptions = { force: false };
+var syncOptions = { force: true };
 
 app.get("/gigview", function(req, res) {
     connection.query("SELECT * FROM Posts;", function(err, data) {
