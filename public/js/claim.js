@@ -9,6 +9,8 @@ $(document).ready(function () {
     } else {
       console.log(`${data.firstname} is logged in.`);
       $("#approve").attr("onclick", loggedInLink);
+      $("#loginout").attr("href", "/logout").text("Logout");
+      $("#account").attr("href", "/account");
       $("#approve").on("click", function (event) {
         event.preventDefault();
         console.log("This button works!");
