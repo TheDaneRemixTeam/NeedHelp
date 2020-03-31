@@ -71,7 +71,7 @@
                 <h3 style="text-align: center;">Gigs You Posted</h3>
 {{#each postedGigs}}
 
-    <div class="card">
+    <div class="card" style="margin: 3%;">
       {{!-- <img src="..." class="card-img-top" alt="..."> --}}
       <div class="card-body">
         <h5 class="card-title">{{title}}</h5>
@@ -82,11 +82,11 @@
       </div>
       <div class="card-footer">
         
-        <small class="text-muted">Budget: {{budget}}</small>
+        <small class="text-muted">Budget: {{budget}}</small><br>
+        {{#if claimed}}Claimed by: {{helper.firstname}} {{helper.email}} {{else}}No one has claimed this gig...{{/if}}
 
       </div>
     </div>
-
   {{/each}}
               </div>
             </div>
