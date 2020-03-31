@@ -13,6 +13,7 @@ $(document).ready(function() {
           console.log(data.firstname);
           $("#help-btn").attr("onclick", loginHref);
           $("#loginout").attr("href", "/logout").text("Logout");
+          $("#account").attr("href", "/account");
       }
     });
   });
