@@ -84,11 +84,10 @@
       <div class="card-footer">
         
         <small class="text-muted">Budget: {{budget}}</small><br>
-        {{#if claimed}}Claimed by:{{helper.firstname helper.lastname}} <br>{{helper.email}} br{{else}}No one has claimed this gig...{{/if}}
+        {{#if claimed}}Claimed by: {{helper.firstname}} {{helper.email}} {{else}}No one has claimed this gig...{{/if}}
 
       </div>
     </div>
-
   {{/each}}
               </div>
             </div>
