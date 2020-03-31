@@ -12,6 +12,7 @@ $(document).ready(function() {
       else {
           console.log(data.firstname);
           $("#help-btn").attr("onclick", loginHref);
+          $("#loginout").attr("href", "/logout").text("Logout");
       }
     });
   });
