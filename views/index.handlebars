@@ -91,7 +91,8 @@
         {{!-- <img src="..." class="card-img-top" alt="..."> --}}
         <div class="card-body">
           <h5 class="card-title">{{title}}</h5>
-          <small>Requestor: {{poster}}</small>
+          <small>Requestor: {{poster}}</small><br>
+          <small>Posted on: {{createdAt}}</small>
           <hr>
 
           <p class="card-text">{{description}}</p>
@@ -99,7 +100,7 @@
         <div class="card-footer">
           <button class="btn btn-success" type="submit" id="help" onclick="window.location.href='/gigview/{{id}}'">I Can
             Help!</button>
-          <small class="text-muted">Budget: {{budget}}</small>
+          <small class="text-muted">Budget: ${{budget}}</small>
 
         </div>
       </div>
