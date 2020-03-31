@@ -5,7 +5,7 @@ var db = require("../models");
 module.exports = function(app) {
     // Load index page
     app.get("/", function(req, res) {
-        db.Post.findAll({ raw: true, where: { claimed: false } }).then(function(dbPost) {
+        db.Post.findAll({ raw: true, where: { claimed: false } }) {}.then(function(dbPost) {
             //console.log(dbPost);
             res.render("index", {
                 gigs: dbPost
