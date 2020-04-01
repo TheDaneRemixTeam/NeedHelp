@@ -37,7 +37,7 @@ require("./routes/apiRoutes")(app);
 require("./routes/login-api-routes")(app);
 require("./routes/htmlRoutes")(app);
 
-var syncOptions = { force: true };
+var syncOptions = { force: false };
 
 app.get("/gigview", function(req, res) {
     connection.query("SELECT * FROM Posts;", function(err, data) {
@@ -51,7 +51,7 @@ app.get("/gigview", function(req, res) {
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`
 if (process.env.NODE_ENV === "test") {
-    syncOptions.force = true;
+    syncOptions.force = false;
 }
 
 // Starting the server, syncing our models ------------------------------------/
